@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Hero = () => {
+const Hero = props => {
   return (
     <div className='px-5 py-10 relative pb-16 z-0'>
       <h1 className='text-4xl font-bold my-10'>Fun facts about React</h1>
@@ -23,7 +23,11 @@ const Hero = () => {
         </div>
       </ul>
       <div>
-        <img src='./reactjs-icon.svg' alt='backgound icon' className=' absolute right-0 bottom-10 -z-10' />
+        <img
+          src={`${props.mode ? './reactjs-icon.svg' : './reactjs-icon2.svg'}`}
+          alt='backgound icon'
+          className=' absolute right-0 bottom-10 -z-10'
+        />
       </div>
     </div>
   );
