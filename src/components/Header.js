@@ -6,10 +6,15 @@ const Header = props => {
       <img src='./logo.svg' alt='logo' />
       <div className='flex gap-3 items-center'>
         <span className={`font-bold text-lg ${props.mode ? 'text-[#2B283A]' : 'text-gray-500'} `}>light</span>
-        <div className='bg-[#2B283A] w-12 rounded-full'>
-          <div className='bg-white rounded-full w-6 h-6' onClick={props.handleMode}></div>
+        <div className={`${props.mode ? 'bg-[#2B283A]' : 'bg-white'} w-12 rounded-full relative`}>
+          <div
+            className={`${
+              props.mode ? 'bg-white translate-x-0' : 'bg-[#2B283A] translate-x-6 '
+            } rounded-full w-6 h-6 duration-300`}
+            onClick={props.handleMode}
+          ></div>
         </div>
-        <span className={`font-bold text-lg ${props.mode ? 'text-gray-300' : 'text-white'}`}>dark</span>
+        <span className={`font-bold text-lg ${props.mode ? 'text-gray-300' : 'text-white'} `}>dark</span>
       </div>
     </div>
   );
