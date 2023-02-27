@@ -3,9 +3,11 @@ import Hero from './components/Hero';
 
 function App() {
   return (
-    <div className='App'>
-      <Header />
-      <Hero />
+    <div className='flex justify-center mt-20'>
+      <div className='w-[500px] bg-white '>
+        <Header />
+        <Hero />
+      </div>
     </div>
   );
 }
