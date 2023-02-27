@@ -2,7 +2,7 @@ import React from 'react';
 
 const Hero = () => {
   return (
-    <div className='px-5 py-10 relative pb-16'>
+    <div className='px-5 py-10 relative pb-16 z-0'>
       <h1 className='text-4xl font-bold my-10'>Fun facts about React</h1>
       <ul className=' space-y-5'>
         <div className='flex gap-2 items-center'>
@@ -23,7 +23,7 @@ const Hero = () => {
         </div>
       </ul>
       <div>
-        <img src='./reactjs-icon.svg' alt='backgound icon' className=' absolute right-0 bottom-10' />
+        <img src='./reactjs-icon.svg' alt='backgound icon' className=' absolute right-0 bottom-10 -z-10' />
       </div>
     </div>
   );
